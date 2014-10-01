@@ -1,10 +1,12 @@
 <div id="top-10">
 	<p>Worst 10 Movies</p><br>
 	<%# if @movies %>
+	<div id="each-movie">
 		<% @movies.each do |movie| %>
 			<p><a href="/movie/<%= movie.id%>"><%= movie.title %></a></p>
 		<% end %>
 	<%# end %>
+	</div>
 </div>
 
 <div id="slideshow">

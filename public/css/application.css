@@ -2,6 +2,7 @@ header {
 	text-align: center;
 	background-color: green;
 	font-size: 40px;
+	margin: 0;
 }
 
 li {
@@ -14,14 +15,24 @@ li {
 	background-image: url('http://i.imgur.com/ueIlCsJ.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	margin: 0;
 }
 
-a:link, a:visited, a:active {
+#each-movie a:link, #each-movie a:visited, #each-movie a:active {
+	color: black;
+}
+
+#each-movie a:hover {
+	color: brown; 
+
+}
+
+#header-bar a:link, #header-bar a:visited, #header-bar a:active {
 	text-decoration: none;
 	color: black;
 }
 
-a:hover {
+#header-bar a:hover {
 	color: brown; 
 
 }
