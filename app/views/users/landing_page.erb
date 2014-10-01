@@ -1,16 +1,13 @@
 <div id="top-10">
-	<p>Worst 10 Movies</p><br>
-	<%# if @movies %>
+	<h2><u>Worst 10 Movies</u></h2>
 	<div id="each-movie">
 		<% @movies.each do |movie| %>
 			<p><a href="/movie/<%= movie.id%>"><%= movie.title %></a></p>
 		<% end %>
-	<%# end %>
 	</div>
 </div>
 
 <div id="slideshow">
-	
 	<figure class="show">
 		<img src="http://cinemassacre.com/wp-content/uploads/2007/05/spiderman3.jpg" alt="" width="100%">
 		<figcaption>Spiderman 3</figcaption>
