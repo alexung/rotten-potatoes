@@ -40,6 +40,7 @@ post '/session' do
 end
 
 get '/user/:user_id' do
+	@movies = Movie.all
 	erb :'/users/landing_page'
 end
 

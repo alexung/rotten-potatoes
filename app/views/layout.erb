@@ -24,6 +24,7 @@
     <ul>
     <% if session[:user_id] %>
       <a href="/user/<%= session[:user_id] %>/profile"><li>Hello, user</li></a>
+      <a href="/user/<%= session[:user_id]%>"><li>Movies</li></a>
       <a href="/logout"><li>Logout</li></a>
     <% else %>
       <a href="/session"><li>Sign in</li></a>
