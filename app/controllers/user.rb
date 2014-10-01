@@ -44,6 +44,10 @@ get '/user/:user_id' do
 	erb :'/users/landing_page'
 end
 
+get '/user/:user_id/profile' do
+	erb :'/users/profile'
+end
+
 delete '/session' do
 	session.clear
 	erb :index
