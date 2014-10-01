@@ -11,13 +11,29 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <link rel="shortcut icon" href="http://www.favicongenerator.com/favicon2/brave-potato-test1-20140930-favicon.ico">
 
-  <title></title>
+  <title>Rotten Potatoes</title>
 </head>
 <body>
+  <header>
+  Rotten Potatoes
+  <nav>
+    <ul>
+    <% if session[:user_id] %>
+      <a href="/user/<%= session[:user_id] %>/profile">Hello, user</a>
+      <a href="/logout"><li>Logout</li></a>
+    <% else %>
+      <a href="/session"><li>Sign in</li></a>
+      <a href="/user"><li>New Account</li></a>
+    <% end %>
+  </ul>
+</nav>
+
+  </header>
+
   <%= yield %>
 </body>
 </html>
