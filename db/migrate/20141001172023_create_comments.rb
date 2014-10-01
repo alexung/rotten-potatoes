@@ -4,6 +4,8 @@ class CreateComments < ActiveRecord::Migration
   		t.text :text
   		t.belongs_to :user
   		t.belongs_to :movie
+
+  		t.timestamps
   	end
   end
 end

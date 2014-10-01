@@ -38,7 +38,9 @@
 	<h3>Comments</h3>
 	<% if @user.comments %>
 		<% @user.comments.each do |comment| %>
-			<%= comment.text %><br><br>
+			User: <%= comment.user.name %><br>
+			Time: <%= comment.created_at %><br>
+			Comment: <%= comment.text %><br><br>
 		<% end %> 
 	<% end %>
 </div>
