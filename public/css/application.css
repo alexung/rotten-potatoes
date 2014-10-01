@@ -9,3 +9,9 @@ li {
 	font-size:15px;
 	display: inline;
 }
+
+.homepage-photo img {
+	background-image: url('http://i.imgur.com/ueIlCsJ.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
