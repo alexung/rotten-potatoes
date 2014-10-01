@@ -14,27 +14,30 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <link rel="shortcut icon" href="http://www.favicongenerator.com/favicon2/brave-potato-test1-20140930-favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
   <title>Rotten Potatoes</title>
 </head>
 <body>
-<div id="header-bar">
   <header>
-    <a href="/">Rotten Potatoes</a>
-    <nav>
-      <ul>
-      <% if session[:user_id] %>
-        <a href="/user/<%= session[:user_id] %>/profile"><li>Hello, user</li></a>
-        <a href="/user/<%= session[:user_id]%>"><li>Movies</li></a>
-        <a href="/logout"><li>Logout</li></a>
-      <% else %>
-        <a href="/session"><li>Sign in</li></a>
-        <a href="/user"><li>New Account</li></a>
-      <% end %>
-      </ul>
-    </nav>
+    <div id="title">
+      <a href="/">Rotten Potatoes</a>
+    </div>
+    <div id="header-options">
+      <nav>
+        <ul>
+        <% if session[:user_id] %>
+          <a href="/user/<%= session[:user_id] %>/profile"><li>Hello, user</li></a>
+          <a href="/user/<%= session[:user_id]%>"><li>Movies</li></a>
+          <a href="/logout"><li>Logout</li></a>
+        <% else %>
+          <a href="/session"><li>Sign in</li></a>
+          <a href="/user"><li>New Account</li></a>
+        <% end %>
+        </ul>
+      </nav>
+    </div>
   </header>
-</div>
 
   <%= yield %>
 </body>
