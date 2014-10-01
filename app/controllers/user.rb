@@ -5,6 +5,10 @@ before '/:username/landing_page' do
 	session[:user_id] == @user.id ? @valid = true : @valid = false
 end
 
+get '/' do
+	erb :index
+end
+
 get '/user' do
 	erb :'users/create_user'
 end
