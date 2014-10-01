@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	};
 
-	$('.next').on('click', function(){
+	$('.next').on('click', function() {
 		counter++;
 		showCurrent();
 	});
