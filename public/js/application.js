@@ -1,7 +1,27 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+	
+	var counter = 0,
+	$items = $('#slideshow figure'),
+	numItems = $items.length;
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+	var showCurrent = function() {
+
+		var itemToShow = Math.abs(counter%numItems);
+
+		$items.removeClass('show');
+
+		$items.eq(itemToShow).addClass('show');
+
+	};
+
+	$('.next').on('click', function(){
+		counter++;
+		showCurrent();
+	});
+
+	$('.prev').on('click', function() {
+		counter--;
+		showCurrent();
+	});
+
 });
