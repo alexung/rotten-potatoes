@@ -1,14 +1,24 @@
-<div id="movie-title">
-	<%= @movie.title %>
-</div>
-
-<div id="movie-poster">
-	<img src="<%= @movie.poster_url%>" alt="movie poster">
-</div>
-
 <div id="movie-potatometer">
-	Potatometer: <%= @movie.potatometer %>
+	<% if @movie.potatometer > 50 %>
+			<img src="http://www.rubberontheroad.org/wp-content/uploads/2010/07/a-clean-ptato-249x300.gif" height="100px" width="100px">
+			Potatometer: <%= @movie.potatometer %>
+	<% else %>
+			<img src="http://i.imgur.com/SUhkF3q.gif" title="Hosted by imgur.com" height="100px" width="100px" />
+				Potatometer: <%= @movie.potatometer %>
+	<% end %>
+
 </div>
+
+<div class="movie-title-poster">
+	<div id="movie-title">
+		<%= @movie.title %>
+	</div>
+
+	<div id="movie-poster">
+		<img src="<%= @movie.poster_url%>" alt="movie poster">
+	</div>
+</div>
+
 
 <div id="movie-synopsis">
 	Synopsis: <%= @movie.synopsis %>
