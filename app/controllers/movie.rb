@@ -1,4 +1,4 @@
-get 'movie/:id' do
+get '/movie/:id' do
 	@movies = Movie.find(params[:id])
 	erb :movie
 end
