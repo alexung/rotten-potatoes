@@ -42,10 +42,12 @@ li {
 	margin-right: 60%;
 	margin-left: 3%;
 	overflow: hidden;
+	float: left;
+	position: absolute;
 }
 
 #slideshow {
-	float: right;
+	float: left;
 	position: relative;
 	display: block;
 	overflow: hidden;
