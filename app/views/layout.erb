@@ -18,22 +18,23 @@
   <title>Rotten Potatoes</title>
 </head>
 <body>
+<div id="header-bar">
   <header>
-  <a href="/">Rotten Potatoes</a>
-  <nav>
-    <ul>
-    <% if session[:user_id] %>
-      <a href="/user/<%= session[:user_id] %>/profile"><li>Hello, user</li></a>
-      <a href="/user/<%= session[:user_id]%>"><li>Movies</li></a>
-      <a href="/logout"><li>Logout</li></a>
-    <% else %>
-      <a href="/session"><li>Sign in</li></a>
-      <a href="/user"><li>New Account</li></a>
-    <% end %>
-  </ul>
-</nav>
-
+    <a href="/">Rotten Potatoes</a>
+    <nav>
+      <ul>
+      <% if session[:user_id] %>
+        <a href="/user/<%= session[:user_id] %>/profile"><li>Hello, user</li></a>
+        <a href="/user/<%= session[:user_id]%>"><li>Movies</li></a>
+        <a href="/logout"><li>Logout</li></a>
+      <% else %>
+        <a href="/session"><li>Sign in</li></a>
+        <a href="/user"><li>New Account</li></a>
+      <% end %>
+      </ul>
+    </nav>
   </header>
+</div>
 
   <%= yield %>
 </body>
