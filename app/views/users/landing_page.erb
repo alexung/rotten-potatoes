@@ -1,15 +1,15 @@
 <div id="top-10">
-	<h2><u>Worst 10 Movies</u></h2>
+	<h3><u>Worst 10 Movies</u></h3>
 	<div id="each-movie">
 		<% @movies.each do |movie| %>
 			<p>
 				<a href="/movie/<%= movie.id%>">
 				<% if movie.potatometer > 50 %>
 					<img src="http://4.bp.blogspot.com/_Ek99dG2xVto/TNqKDF5sJyI/AAAAAAAAAGM/zA7uT-huhHw/s1600/very+angry+potato.jpg" height="30px" width="30px">
-					<%= movie.title %>
+					<%= movie.potatometer %>% <%= movie.title %>
 				<% else %>
 					<img src="http://i.imgur.com/SUhkF3q.gif" title="Hosted by imgur.com" height="30px" width="30px" />
-					<%= movie.title %>
+					<%= movie.potatometer %>% <%= movie.title %>
 				<% end %>
 				</a>
 			</p>
@@ -40,4 +40,5 @@
 </div>
 
 <div id="certified-fresh">
+	<p>Certified Fresh</p>
 </div>
