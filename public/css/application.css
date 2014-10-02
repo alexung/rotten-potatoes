@@ -1,3 +1,21 @@
+body {
+	background-color: #F8F8FF;
+}
+
+h2 {
+	font-family: "Lobster", cursive;
+	color: yellow;
+	position: absolute;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
 #title {
 	font-family: "Lobster", cursive;
 	background-color: green;
@@ -30,11 +48,39 @@
 	right: 10px;
 }
 
-#homepage-photo {
+#homepage-photo-container {
+	position: relative;
 	background-image: url('http://i.imgur.com/ueIlCsJ.jpg');
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-attachment: fixed;
+
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	margin: 0;
+}
+
+#photo {
+	position: absolute;
+	margin: 0;
+	left: 0;
+	top: 0;
+
+}
+
+#text-over-photo {
+	margin-top: 45%;
+	margin-left: 20%;
+	position: absolute;
+	font-weight: bold;
+	z-index: 80;
+	color: yellow;
+	font-family: "Lobster", cursive;
+	font-size: 24px;
+	font-outline: black;
+
 }
 
 #each-movie a:link, #each-movie a:visited, #each-movie a:active {
@@ -145,15 +191,17 @@ figure.show {
 }
 
 #movie-potatometer {
+	margin-top: 3%;
 	float:right;
 	position: absolute;
-	margin-left: 70%;
+	margin-left: 50%;
 	margin-right: 3%;
 	border: solid;
 	background-color: #FFDAB9;
 }
 
 .movie-title-poster {
+	margin-top: 3%;
 	float:right;
 	position:absolute;
 	margin-left: 3%;

@@ -13,5 +13,5 @@ post '/movie/:id' do
 	# p @user
 	# p @user.comments
 
-	erb :movie
+	json :comment => @comment, :user => @user
 end

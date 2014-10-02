@@ -24,4 +24,21 @@ $(document).ready(function() {
 		showCurrent();
 	});
 
+// --comment box ajax below --
+
+	$('#comment-box').submit(function(event) {
+		event.preventDefault();
+		var comment = $('#comment-text').val()
+		$.ajax({
+			type: "POST",
+			url: $('#comment-box').attr("action"), 
+			data: {text: comment}
+			//stuff I'm sending
+		}).done(function(response) {
+			$('#comments').append("User: " + response['user']['name'] + "<br> Time: " + response['comment']['created_at'] + "<br> Comment: " + response['comment']['text'])
+			console.log(response)
+			// stuff i'm getting back
+		});
+	});
+
 });

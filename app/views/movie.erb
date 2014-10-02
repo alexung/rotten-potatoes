@@ -1,17 +1,17 @@
 <div id="movie-potatometer">
 	<% if @movie.potatometer > 50 %>
 			<img src="http://4.bp.blogspot.com/_Ek99dG2xVto/TNqKDF5sJyI/AAAAAAAAAGM/zA7uT-huhHw/s1600/very+angry+potato.jpg" height="100px" width="100px">
-			Potatometer: <%= @movie.potatometer %>%
+			<h1>Potatometer<br> <%= @movie.potatometer %>%</h1>
 	<% else %>
 			<img src="http://i.imgur.com/SUhkF3q.gif" title="Hosted by imgur.com" height="100px" width="100px" />
-				Potatometer: <%= @movie.potatometer %>%
+				<h1>Potatometer<br> <%= @movie.potatometer %>%</h1>
 	<% end %>
 
 </div>
 
 <div class="movie-title-poster">
 	<div id="movie-title">
-		<%= @movie.title %>
+		<h1><%= @movie.title %></h1>
 	</div>
 
 	<div id="movie-poster">
@@ -21,19 +21,17 @@
 
 
 <div id="movie-synopsis">
-	Synopsis: <%= @movie.synopsis %>
+	<u>Synopsis</u><br> <%= @movie.synopsis %>
 </div>
 
 <div id="movie-actors">
 </div>
 
-<div id="comment-box">
 	<h3>Comments</h3>
-	<form action="/movie/<%= @movie.id %>" method="POST">
-		<textarea name="text" placeholder="Add in comment"></textarea><br><br>
+	<form id="comment-box" action="/movie/<%= @movie.id %>" method="POST">
+		<textarea id="comment-text" name="text" placeholder="Add in comment"></textarea><br><br>
 		<input type="submit" name="Submit">
 	</form><br>
-</div>
 
 <div id="comments">
 	<% if @movie.comments %>
