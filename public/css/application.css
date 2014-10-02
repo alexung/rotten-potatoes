@@ -88,7 +88,7 @@ form {
 }
 
 #each-movie a:hover {
-	color: brown; 
+	color: brown;
 
 }
 
@@ -99,7 +99,7 @@ form {
 
 #header-options a:hover {
 	text-decoration: none;
-	color: blue; 
+	color: blue;
 }
 
 #title a:link, #title a:visited, #title a:active, #title a:hover {
@@ -109,14 +109,13 @@ form {
 
 
 #top-10 {
-	border: solid;
 	margin-top: 3%;
 	margin-right: 60%;
 	margin-left: 3%;
 	overflow: hidden;
 	float: left;
 	position: absolute;
-
+	padding: 2%;
 }
 
 #slideshow {
@@ -124,10 +123,11 @@ form {
 	position: relative;
 	display: block;
 	overflow: hidden;
-	border: solid;
 	margin-top: 3%;
 	margin-right: 3%;
 	margin-left: 45%;
+	padding: 2%;
+
 }
 
 figure {
@@ -198,6 +198,7 @@ figure.show {
 	margin-right: 3%;
 	border: solid;
 	background-color: #FFDAB9;
+	padding: 2% 10% 2% 10%;
 }
 
 .movie-title-poster {
@@ -206,7 +207,7 @@ figure.show {
 	position:absolute;
 	margin-left: 3%;
 	margin-right: 30%;
-	border: solid;
+	padding: 2% 10% 2% 10%;
 }
 
 #movie-synopsis {
