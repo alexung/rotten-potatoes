@@ -26,3 +26,21 @@
 
 <div id="movie-actors">
 </div>
+
+<div id="comment-box">
+	<form action="/movie/<%= @movie.id %>" method="POST">
+		<textarea name="text" placeholder="Add in comment"></textarea><br><br>
+		<input type="submit" name="Submit">
+	</form>
+</div>
+
+<div id="comments">
+	<h3>Comments</h3>
+	<% if @movie.comments %>
+		<% @movie.comments.each do |comment| %>
+			User: <%= comment.user.name %><br>
+			Time: <%= comment.created_at %><br>
+			Comment: <%= comment.text %><br><br>
+		<% end %> 
+	<% end %>
+</div>
