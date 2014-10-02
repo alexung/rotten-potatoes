@@ -150,6 +150,7 @@ figure.show {
 	margin-left: 70%;
 	margin-right: 3%;
 	border: solid;
+	background-color: #FFDAB9;
 }
 
 .movie-title-poster {
@@ -165,4 +166,8 @@ figure.show {
 	position:relative;
 	clear:both;
 
+}
+
+#certified-fresh {
+	margin-top: 3%;
 }
