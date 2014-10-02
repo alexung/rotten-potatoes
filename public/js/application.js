@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
 	var counter = 0,
 	$items = $('#slideshow figure'),
 	numItems = $items.length;
@@ -31,10 +31,12 @@ $(document).ready(function() {
 		var comment = $('#comment-text').val()
 		$.ajax({
 			type: "POST",
-			url: $('#comment-box').attr("action"), 
-			data: {text: comment}
+			url: $('#comment-box').attr("action"),
+			data: {text: comment},
+			dataType: 'JSON'
 			//stuff I'm sending
 		}).done(function(response) {
+			console.log(response);
 			$('#comments').append("User: " + response['user']['name'] + "<br> Time: " + response['comment']['created_at'] + "<br> Comment: " + response['comment']['text'])
 			console.log(response)
 			// stuff i'm getting back

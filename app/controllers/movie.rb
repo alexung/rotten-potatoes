@@ -13,5 +13,6 @@ post '/movie/:id' do
 	# p @user
 	# p @user.comments
 
-	json :comment => @comment, :user => @user
+	#json :comment => @comment, :user => @user
+ {comment: @comment, user: @user}.to_json
 end
