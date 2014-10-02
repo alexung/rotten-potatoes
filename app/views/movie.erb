@@ -27,13 +27,11 @@
 <div id="movie-actors">
 </div>
 
-<div id="comment-box">
 	<h3>Comments</h3>
-	<form action="/movie/<%= @movie.id %>" method="POST">
-		<textarea name="text" placeholder="Add in comment"></textarea><br><br>
+	<form id="comment-box" action="/movie/<%= @movie.id %>" method="POST">
+		<textarea id="comment-text" name="text" placeholder="Add in comment"></textarea><br><br>
 		<input type="submit" name="Submit">
 	</form><br>
-</div>
 
 <div id="comments">
 	<% if @movie.comments %>
