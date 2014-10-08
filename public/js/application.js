@@ -39,6 +39,7 @@ $(document).ready(function() {
 			console.log(response);
 			$('#comments').append("User: " + response['user']['name'] + "<br> Time: " + response['comment']['created_at'] + "<br> Comment: " + response['comment']['text'])
 			console.log(response)
+			$('#comment-text').val('');
 			// stuff i'm getting back
 		});
 	});
